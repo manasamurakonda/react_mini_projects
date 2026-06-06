@@ -1,0 +1,24 @@
+.container{
+  text-align: center;
+}
+.counter{
+  font-size: 30px;
+   margin-bottom: 30px;
+}
+.status{
+  font-size: 30px;
+   margin-bottom: 30px;
+}
+.buttons{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+button{
+  font-size: 30px;
+  padding: 10px 25px;
+  border-radius: 8px;
+  background-color: aqua;
+  border: 2px;
+  cursor: pointer;
+}
