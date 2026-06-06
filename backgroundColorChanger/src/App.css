@@ -1,0 +1,10 @@
+.heading{
+  margin-bottom: 130px;
+}
+button{
+  font-size: 30px;
+  border-radius: 20px;
+  background-color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
