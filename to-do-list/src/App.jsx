@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./App.css"
 function App(){
   const [tasks,setTasks] = useState([]);
   const [curTask,setCurTask] = useState("");
@@ -21,9 +22,9 @@ function App(){
         <h1>to-do-list</h1>
       </div>
       <div className = "addButton">
-        <button onClick={displayTextBox}>+</button>
+        <button className = "plusButton" onClick={displayTextBox}>+</button>
         { show && (
-        <div>
+        <div className="textbox">
           <input type="text" onChange = {(event)=>{
             setCurTask(event.target.value);
           }} placeholder="Enter a task" />
@@ -31,8 +32,8 @@ function App(){
         </div>)}
         {
           tasks.map((task, index) => (
-          <div>
-            <p key={index}>{task}</p>
+          <div className = "displayTasks">
+            <p key={index} className="task">{task}</p>
             <button onClick = {()=>{
               deleteTask(index);
             }}>Delete</button>
