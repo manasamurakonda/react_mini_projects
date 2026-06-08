@@ -45,12 +45,16 @@ input{
   justify-content: space-between;
   align-items: center;
   width: 500px;
-  border: 1px solid rgb(182, 182, 239);
-  border-radius: 5px;
-  padding: 10px 20px;
+  border: 1px solid rgb(182, 182, 239); 
+  border-radius: 5px; 
+  padding: 10px 20px; 
   margin: 10px 0;
 }
 .task{
   font-size: 25px;
   color: rgb(105, 99, 99);
+}
+.taskButtons{
+  display: flex;
+  gap: 10px;
 }
