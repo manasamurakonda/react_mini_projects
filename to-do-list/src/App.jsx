@@ -18,7 +18,6 @@ function App(){
 }, []);
 useEffect(() => {
   if (!loaded) return;
-
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }, [tasks, loaded]);
   function displayTextBox(){
