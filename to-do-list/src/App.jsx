@@ -76,7 +76,7 @@ useEffect(() => {
               ) : (
               <button onClick={() => {
                 setEditIndex(index);
-                setEditText(task);
+                setEditText(note);
               }}>
               Edit
               </button>
