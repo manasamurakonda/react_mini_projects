@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./App.css"
 function App(){
   const [show,setShow] = useState(false);
   const [curTitle,setCurTitle] = useState("");
@@ -77,23 +78,25 @@ function App(){
     setNotes(newNotes);
   }
   return(
-    <div>
+    <div className = "container">
       <div className = "heading">
         <p>Notes App</p>
       </div>
       <div className = "addNotesSection">
-        <button onClick = {displayInputBox} >+</button>
+        <button id = "plusButton" onClick = {displayInputBox} >+</button>
       </div>
-      <input
-      placeholder="Search notes"
-      value={searchText}
-      onChange={(e) => {
-        setSearchText(e.target.value);
-      }}
-      />
-      <button onClick={() => setSearchText("")}>
-        Clear
-      </button>
+      <div>
+        <input
+        placeholder="Search notes"
+        value={searchText}
+        onChange={(e) => {
+          setSearchText(e.target.value);
+        }}
+        />
+        <button onClick={() => setSearchText("")}>
+          Clear
+        </button>
+      </div>
       { show && (
         <div className = "inputBox">
           <input className="titleBox" placeholder="enter title" value={curTitle} onChange = {(event)=>{
@@ -128,7 +131,14 @@ function App(){
               />
               </div>
               ) : (
-              <p className="note">{note.title}--{note.content}</p>
+              <div>
+                <div className="title">
+                  <p>{note.title}</p>
+                </div>
+                <div className="content">
+                  <p>{note.content}</p>
+                </div>
+              </div>
               )
             }
             <div className = "taskButtons">
